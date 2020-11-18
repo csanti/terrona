@@ -41,7 +41,7 @@ func main() {
 	// with the cdc
 
 	rootCmd := &cobra.Command{
-		Use:   "tronacli",
+		Use:   "terronacli",
 		Short: "Command line interface for interacting with tronad",
 	}
 
