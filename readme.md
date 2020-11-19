@@ -4,7 +4,7 @@
 
 ## Native Currencies
 
-Terrona is designed with the concept of managing the most important resources in a fictional **world where a virus has taken over**.
+Terrona is designed with the concept of managing scarce resources in a fictional **world where a virus has taken over**.
 
 |  Currency   | Denomination  | Description  	|
 | ----------- | ------------- |  ------------- |
@@ -33,6 +33,7 @@ starport serve -v
 ```
 
 Starport will generate a genesis containing a `gentx` that will attempt to create a validator. This is only possible if the staking amount is greater than `MinStake` (`DefaultMinStake=1000000umasks`). Only `umasks` is accepted as stake currency.
+After Starport generates the initial configuration files, binaries can be recompiled with `make`.
 
 ### Useful commands:
 
