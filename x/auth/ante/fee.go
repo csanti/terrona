@@ -83,7 +83,7 @@ func (mfd MempoolFeeDecorator) AnteHandle(ctx sdk.Context, tx sdk.Tx, simulate b
 
 		// tax check
 		// Get the amount of coins being sent, and calculate the tax accordingly to check if the fee is enough
-		// txValue contains the toal amount of coins in the transaction
+		// txValue contains the toal amount of any coins in the transaction
 		txValue := sdk.ZeroInt()
 		for _, msg := range feeTx.GetMsgs() {
 			switch msg := msg.(type) {
@@ -96,8 +96,11 @@ func (mfd MempoolFeeDecorator) AnteHandle(ctx sdk.Context, tx sdk.Tx, simulate b
 			}
 		}
 		fmt.Println("Total value: ",txValue.Int64())
+		// if transaction contains value transfer, need to check if it provided enough fees
 		if !txValue.IsZero() {
 			taxRate := mfd.policyKeeper.GetTaxRate(ctx)
+			// fees can only be paid with tpaper
+			// ignore other fees
 			if len(feeCoins) == 0 || feeCoins[0].Denom != assets.MicroTpaperDenom {
 				fmt.Println("Not enough to pay for tax")
 				return ctx, sdkerrors.Wrapf(sdkerrors.ErrInvalidCoins, "not valid coins")

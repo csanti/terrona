@@ -3,7 +3,7 @@ package types
 //nolint
 const (
 	MicroTpaperDenom = "utpaper"
-	MicroMaskDenom  = "umask"
+	MicroMaskDenom  = "umasks"
 
 	MicroUnit = int64(1e6)
 )

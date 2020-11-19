@@ -13,26 +13,26 @@ Terrona is designed with the concept of managing the most important resources in
 
 ## Characteristics
 
-- Only Masks can be used as staking to become a validator or delegate
+- Only Masks can be used as stake to become a validator or delegate
 - All fees and rewards will be paid with *Tpaper*
 - To become a validator, a node must be holding a minimum amount of Masks, detrmined by ``MinStake``
 - Fees depend on a ``TaxRate`` managed by the blockchain
 - ``TaxRate`` can only be paid with *Tpaper*
-- ``TaxRate`` and ``MinStake`` can be modified using the governance module, creating and aprooving update proposals.
+- ``TaxRate`` and ``MinStake`` can be modified using the governance module, creating and approving update proposals.
 - Validators receive block rewards (*Tpaper* fees enforced by the tax), distributed with the distribution module
 
 ## How to test basic functionality
 
-[Starport](https://github.com/tendermint/starport) used for bootstraping and genesis management, **required** for building the genesis file and gentxs.
+[Starport](https://github.com/tendermint/starport) used for bootstraping and genesis management, **required** for building the genesis file.
 
 ``config.yml`` defines user accounts and gentx to create the initial validator
 
-Generate genesis based on ``config.yml`` and start the node
+Generate genesis based on ``config.yml`` and start the node. It will also build *terronad* and *terronacli*.
 ```
 starport serve -v
 ```
 
-Starport will generate a genesis containing a `gentx` that will attempth to create a validator. This is only possible if the staking amount is greater than `MinStake` (`DefaultMinStake=1000000umasks`). Only `umasks` is accepted as stake currency.
+Starport will generate a genesis containing a `gentx` that will attempt to create a validator. This is only possible if the staking amount is greater than `MinStake` (`DefaultMinStake=1000000umasks`). Only `umasks` is accepted as stake currency.
 
 ### Useful commands:
 
