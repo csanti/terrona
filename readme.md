@@ -6,10 +6,10 @@
 
 Terrona is designed with the concept of managing the most important resources in a fictional **world where a virus has taken over**.
 
-| Currency | Denomination  | Description  	|
-| -------- | ------------- |  ------------- |
-| 🧻 TPaper | utpaper | Native currenty, used to pay tax induced fees, so block rewards are also paid in tpaper.|
-| 😷 Masks | umasks | Staking currency. Must stake more than `MinStake` of this coin to become a validator.	|
+|  Currency   | Denomination  | Description  	|
+| ----------- | ------------- |  ------------- |
+| 🧻 TPaper   | utpaper | Native currenty, used to pay tax induced fees, so block rewards are also paid in tpaper.|
+| 😷 Masks    | umasks | Staking currency. Must stake more than `MinStake` of this coin to become a validator.	|
 
 ## Characteristics
 
