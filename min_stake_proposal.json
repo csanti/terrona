@@ -1,0 +1,14 @@
+{
+  "title": "Update minimum stake",
+  "description": "Update the minimum required stake to become a validator",
+  "min_stake": {
+  	"denom": "umasks",
+  	"amount": "2000000"
+  },
+  "deposit": [
+    {
+      "denom": "umasks",
+      "amount": "1"
+    }
+  ]
+}

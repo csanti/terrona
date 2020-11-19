@@ -1,0 +1,11 @@
+{
+  "title": "Update tax rate",
+  "description": "Update the tax rate applied to 'send' transactions",
+  "tax_rate": "0.001",
+  "deposit": [
+    {
+      "denom": "umasks",
+      "amount": "1"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+version: 1
+genesis:
+  app_state:
+   staking:
+     params:
+       bond_denom: "umasks"
+accounts:
+  - name: user1
+    coins: ["1000utpaper", "200000000umasks"]
+  - name: user2
+    coins: ["5000utpaper", "5000000000umasks"]
+  - name: user3
+    coins: ["5000utpaper", "5000000000umasks"]
+  - name: user4
+    coins: ["5000utpaper", "5000000000umasks"]
+  - name: user5
+    coins: ["5000utpaper", "5000000000umasks"]
+validator:
+  name: user1
+  staked: "1000000umasks"
